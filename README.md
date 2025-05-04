@@ -12,11 +12,11 @@ brew install stow
 
 
 ```sh
-sudo apt install git ssh tmux neovim
+sudo apt install curl zsh git ssh tmux neovim
 ``` 
 
 ```sh
-brew install git tmux neovim
+brew install curl zsh git tmux neovim
 ``` 
 
 ### Configs
