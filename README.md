@@ -8,7 +8,7 @@ sudo apt install stow
 brew install stow
 ```
 
-# Install nvim
+# Install packages
 
 
 ```sh
