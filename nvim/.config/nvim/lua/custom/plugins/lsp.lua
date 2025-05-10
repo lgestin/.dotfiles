@@ -165,7 +165,34 @@ return {
 		--  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
 		local capabilities = require("blink.cmp").get_lsp_capabilities()
 		-- capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
-		require("lspconfig").pylsp.setup({ capabilities = capabilities })
+		-- Configure Ty
+		local configs = require("lspconfig.configs")
+
+		-- Register the ty server configuration
+		if not configs.ty then
+			configs.ty = {
+				default_config = {
+					cmd = { "ty", "server" },
+					filetypes = { "python" },
+					root_dir = require("lspconfig.util").root_pattern(
+						"pyproject.toml",
+						"ty.toml",
+						"setup.py",
+						"setup.cfg",
+						"requirements.txt",
+						"Pipfile",
+						".git"
+					),
+					single_file_support = true,
+					capabilities = capabilities,
+				},
+			}
+		end
+
+		-- Setup the Ty LSP
+		require("lspconfig").ty.setup({})
+
+		-- require("lspconfig").pylsp.setup({ capabilities = capabilities })
 		-- Enable the following language servers
 		--  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
 		--
