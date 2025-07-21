@@ -1,0 +1,124 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    },
+    "default_profile": "ask"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": false,
+    "selections_menu": false
+  },
+  "show_edit_predictions": false,
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "icon_theme": "Material Icon Theme",
+  "ssh_connections": [
+    {
+      "host": "nebius",
+      "projects": [
+        {
+          "paths": ["/home/lucas/code/computer_vision"]
+        }
+      ]
+    },
+    {
+      "host": "rem-lovelace",
+      "projects": [
+        {
+          "paths": ["/raid/shared/storage/home/lucas/code/computer_vision"]
+        }
+      ],
+      "port_forwards": [{ "remote_port": 8010, "local_port": 8010 }]
+    },
+    {
+      "host": "lovelace",
+      "projects": [
+        {
+          "paths": ["/raid/shared/storage/home/lucas/code/computer_vision"]
+        }
+      ],
+      "port_forwards": [{ "remote_port": 8010, "local_port": 8010 }]
+    }
+  ],
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+  "relative_line_numbers": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "gutter": {
+    "min_line_number_digits": 1,
+    "runnables": false,
+    "breakpoints": false,
+    "folds": false
+  },
+
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Ayu Dark"
+  },
+  "experimental.theme_overrides": {
+    "panel.background": "#0E1015",
+    "surface.background": "#0E1015",
+    "syntax": {
+      "comment": {
+        "color": "#646A71",
+        "font_style": "italic"
+      },
+      "variable.special": {
+        "color": "#919294",
+        "font_style": "italic"
+      }
+    }
+  },
+  // "ui_font_family": "Fira Code",
+  "buffer_font_family": "Fira Code",
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright", "ruff"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    }
+  },
+  "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          // Ruff server settings goes here
+          "lineLength": 120,
+          "lint": {
+            "extendSelect": ["I"]
+          }
+        }
+      }
+    }
+  }
+}
