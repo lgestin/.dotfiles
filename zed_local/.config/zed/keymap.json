@@ -1,0 +1,113 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // "j k": "vim::SwitchToNormalMode"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-space k": "workspace::ToggleBottomDock",
+      "ctrl-space c": "workspace::NewTerminal",
+      "ctrl-space n": "pane::ActivateNextItem",
+      "ctrl-space p": "pane::ActivatePreviousItem",
+      "ctrl-space |": "pane::SplitRight",
+      "ctrl-space -": "pane::SplitDown"
+    }
+  },
+  {
+    "context": "Dock || Terminal || Editor",
+    // Pane motions
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "GitPanel",
+    "bindings": { "space g": "git_panel::Close" }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "o": "project_panel::NewFile",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "x": "project_panel::Cut",
+      "y": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "space e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space s p": "projects::OpenRecent",
+      "space s r": "projects::OpenRemote"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      "space |": "pane::SplitRight",
+      "space -": "pane::SplitDown",
+      "space c": "pane::CloseActiveItem",
+      "space k": "editor::Hover",
+      "space e": "project_panel::ToggleFocus",
+      "space s f": "file_finder::Toggle",
+      "space g": "git_panel::ToggleFocus",
+      "space t": "workspace::ToggleBottomDock",
+      "ctrl-space j": "workspace::ToggleBottomDock",
+      "space b": "workspace::ToggleLeftDock",
+      // errors
+      "] e": "editor::GoToDiagnostic",
+      "[ e": "editor::GoToPreviousDiagnostic",
+      // git
+      "] g": "editor::GoToHunk",
+      "[ g": "editor::GoToPreviousHunk"
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "space d": "diagnostics::Deploy",
+      "space g d": "editor::ToggleSelectedDiffHunks",
+      "space g r": "git::Restore"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": { "space o": "outline::Toggle" }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock",
+      "space g": "git_panel::Close",
+      "space b": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "GitPanel && not_editing",
+    "bindings": {
+      "space g": "workspace::ToggleLeftDock"
+    }
+  }
+]
