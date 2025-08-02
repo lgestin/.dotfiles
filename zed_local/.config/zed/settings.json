@@ -12,7 +12,7 @@
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
     },
-    "default_profile": "ask"
+    "default_profile": "minimal"
   },
   "telemetry": {
     "diagnostics": false,
@@ -23,10 +23,25 @@
     "quick_actions": false,
     "selections_menu": false
   },
-  "show_edit_predictions": false,
-  "features": {
-    "edit_prediction_provider": "zed"
+  "tabs": { "file_icons": true },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false
   },
+  "terminal": {
+    "toolbar": { "breadcrumbs": false }
+  },
+  "preferred_line_length": 88,
+  "soft_wrap": "editor_width",
+  "scrollbar": {
+    "axes": { "horizontal": false, "vertical": true },
+    "diagnostics": "none"
+  },
+  "auto_signature_help": true,
+  "show_signature_help_after_edits": true,
+  "active_pane_modifiers": { "inactive_opacity": 0.75 },
+  "show_edit_predictions": false,
   "icon_theme": "Material Icon Theme",
   "ssh_connections": [
     {
@@ -67,15 +82,15 @@
     "breakpoints": false,
     "folds": false
   },
-
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Ayu Dark"
+    "dark": "Chanterelle"
   },
+  "file_types": { "Dockerfile": ["Dockerfile.*", "Dockerfile"] },
   "experimental.theme_overrides": {
-    "panel.background": "#0E1015",
-    "surface.background": "#0E1015",
+    // "panel.background": "#0E1015",
+    // "surface.background": "#0E1015",
     "syntax": {
       "comment": {
         "color": "#646A71",

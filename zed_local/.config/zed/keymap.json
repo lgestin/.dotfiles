@@ -64,32 +64,33 @@
     }
   },
   {
-    "context": "Editor && vim_mode == normal",
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
       "space |": "pane::SplitRight",
       "space -": "pane::SplitDown",
       "space c": "pane::CloseActiveItem",
-      "space k": "editor::Hover",
-      "space e": "project_panel::ToggleFocus",
+      "space s o": "outline::Toggle",
+      "space s m": "vim::ToggleMarksView",
       "space s f": "file_finder::Toggle",
+      "space s b": "tab_switcher::ToggleAll",
+      "space p t": "pane::TogglePinTab",
+      "space e": "project_panel::ToggleFocus",
+      "space o": "outline_panel::ToggleFocus",
       "space g": "git_panel::ToggleFocus",
+      "s g d": "editor::ToggleSelectedDiffHunks",
+      "s g r": "git::Restore",
+      "space d": "diagnostics::Deploy",
       "space t": "workspace::ToggleBottomDock",
+      "space k": "editor::MovePageUp",
+      "space j": "editor::MovePageDown",
       "ctrl-space j": "workspace::ToggleBottomDock",
-      "space b": "workspace::ToggleLeftDock",
+      "space b": "workspace::CloseAllDocks",
       // errors
       "] e": "editor::GoToDiagnostic",
       "[ e": "editor::GoToPreviousDiagnostic",
       // git
       "] g": "editor::GoToHunk",
       "[ g": "editor::GoToPreviousHunk"
-    }
-  },
-  {
-    "context": "Editor && VimControl && !VimWaiting && !menu",
-    "bindings": {
-      "space d": "diagnostics::Deploy",
-      "space g d": "editor::ToggleSelectedDiffHunks",
-      "space g r": "git::Restore"
     }
   },
   {
