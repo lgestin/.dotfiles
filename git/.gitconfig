@@ -1,3 +1,7 @@
+[user]
+	email = lucas.gestin.pro@gmail.com
+	name = lgestin
+
 [init]
 	defaultBranch = master
 
