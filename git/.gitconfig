@@ -12,3 +12,9 @@
 	enabled = true
 [diff]
 	algorithm = histogram
+
+[core]
+	editor = vim
+
+[include]
+	path = ~/.gitconfig.local
