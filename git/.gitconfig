@@ -4,6 +4,11 @@
 
 [init]
 	defaultBranch = master
-
-[core]
-	editor = vim
+[pull]
+	rebase = true
+[push]
+	autoSetupRemote = true
+[rerere]
+	enabled = true
+[diff]
+	algorithm = histogram
